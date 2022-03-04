@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3 - formulaire accessible</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/_normalize.css" rel="stylesheet" type="text/css" media="all">
+    <link href="favicon.ico" rel="icon" type="image">
+</head>
+
+<body>
+    <header class="header">
+        <picture class="header__picture" alt="Image concours  lisant le contenu suivant; Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le
+        Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit
+        voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière,
+        Bell et Voyages Traditours circuits et croisières.">
+            <source srcset="images/bandeau_600.jpg" media="(min-width:599px)">
+            <source srcset="images/bandeau_1200.jpg" media="(min-width:600px)">
+            <img class="header__img" src="images/bandeau_1200.jpg" alt="tourne disque">
+        </picture>
+
+    </header>
+    <main class="main">
+        <div class="main__div">
+            <h1 class="main__h1"> Concours </h1>
+            <p class="main__p">
+                Complétez le coupon de participation et répondez à la question du jour ci-dessous.</br>
+                30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
+                Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
+                les finalistes présents, un grand gagnant s’envolera vers la destination de
+                son choix!</br>
+                Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance
+                à tous!
+            </p>
+        </div>
+        <form class="main__form" action="traitement.php">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend"> Coupon de participation</legend>
+
+                <fieldset class="form__nomComplet">
+                    <legend class="nomComplet_legend"> Nom complet</legend>
+
+                    <p class="form__label">
+                        <label for="prénom">Prénom</label>
+                        <input type="text" name="prénom" id="prénom">
+                    </p>
+
+                    <p class="form__label"><label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom">
+                    </p>
+
+                </fieldset>
+
+                <p class="form__label"><label for="adresse">
+                        Adresse</label>
+                    <input type="text" name="adresse" id="adresse">
+                </p>
+                <p class="form__label"><label for="ville">Ville</label>
+                    <input type="text" name="ville" id="ville">
+                </p>
+                <p class="form__label"><label for="pays">Pays</label>
+                    <input type="text" name="pays" id="pays">
+                </p>
+                <p class="form__label"><label for="codePostal">Code postal (X1X 1X1)</label>
+                    <input type="text" name="codePostal" id="codePostal">
+                </p>
+                <p class="form__label"><label for="courriel">Courriel</label>
+                    <input type="email" name="courriel" id="courriel">
+                </p>
+
+
+                <fieldset class="form__telephone">
+                    <legend class="nomComplet_legend"> Téléphone (indicatif - numéro) </legend>
+
+                    <p class="form__label">
+                        <label for="indicatif">Indicatif</label>
+                        <input type="number" name="indicatif" id="indicatif">
+                    </p>
+                    <span class="form__span">
+                        -
+                    </span>
+
+                    <p class="form__label"><label for="numero">Numéro</label>
+                        <input type="number" name="numero" id="numero">
+                    </p>
+                </fieldset>
+
+                
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
