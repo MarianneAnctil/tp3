@@ -1,0 +1,100 @@
+@media(min-width: 600px){
+    .conteneur{
+        margin: 0 auto;
+        max-width: 1000px;
+        padding:0;
+    }
+}
+
+@media (min-width: 600px) {
+.rangee{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap:nowrap;
+}
+
+.cols_1_de_12{
+    width: 6.5%;
+}
+
+.cols_2_de_12{
+    width: 15%;
+}
+
+.cols_3_de_12{
+    width: 23.5%;
+}
+
+.cols_4_de_12{
+    width: 32%;
+}
+
+.cols_5_de_12{
+    width: 40%;
+}
+
+.cols_6_de_12{
+    width: 49%;
+}
+
+.cols_7_de_12{
+    width: 57.5%;
+}
+
+.cols_8_de_12{
+    width: 66%;
+}
+
+.cols_9_de_12{
+    width: 74.5%;
+}
+
+.cols_10_de_12{
+    width: 83%;
+}
+
+.cols_11_de_12{
+    width: 91.5%;
+}
+
+.cols_12_de_12{
+    width: 100%;
+}
+
+
+}
+
+.form__nomComplet .rangee,
+.form__telephone .rangee,
+.form__date .rangee {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.form__nomComplet .cols_6_de_12{
+    width: 49%;
+}
+.form__telephone .cols_1_de_12{
+    width: 6.5%;
+}
+
+.form__telephone .cols_2_de_12{
+    width: 15%;
+}
+
+.form__telephone .cols_3_de_12{
+    width: 23.5%;
+}
+.form__telephone .cols_8_de_12{
+    width: 66%;
+}
+
+
+
+
+.form__date .cols_4_de_12{
+    width: 32%;
+}

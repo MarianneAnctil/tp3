@@ -23,16 +23,116 @@
 
 /* Utilitaires
    ========================================================================== */
- 
+   html {
+      box-sizing: border-box;
+      max-width:100%;
+  }
+  
+  *, 
+  *::before, 
+  *::after {
+      box-sizing: inherit;
+  }
 
 /* Charte typographique
    ========================================================================== */
- 
+   @import url(tp3_typo.css);
 
 /* Grille
    ========================================================================== */
- 
+   @import url(grille.css);
 
 /* Mise en page
    ========================================================================== */
- 
+ body{
+   line-height: 1.375;
+   font-size: 1.6rem;
+   background-image:linear-gradient(rgb(26, 116, 107), white);
+ }
+ .conteneur{
+    background-color: white;
+ }
+
+ @media (min-width: 600px){
+ .rangee {
+     display: flex;
+     justify-content: space-between;
+     align-items: stretch;
+     flex-wrap: wrap;
+ }
+}
+
+.h1 {
+   width: 100%;
+}
+
+ @media (min-width: 700px) {
+   body {
+       line-height: 1.5;
+   }
+  
+
+}
+
+
+.main__form{
+   background: rgb(218, 218, 218);
+  
+  
+}
+
+.form__fieldset{
+   border: none;
+}
+
+.form__nomComplet,
+.form__telephone,
+.form__date,
+.question{
+   border-radius: 6px;
+   border-color: rgb(0, 0, 0);
+}
+
+.form__label input{
+   color: rgb(28, 105, 136);
+}
+
+
+.header__img{
+   width:100% ;
+}
+
+
+.screen-reader-only{
+   border:0;
+   clip: rect ( 0 0 0 0 );
+   height:1px;
+   margin: -1;
+   overflow: hidden;
+   padding:0;
+   position: absolute;
+   width:1px;
+}
+
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus{
+   clip:auto;
+   height:auto;
+   margin:0;
+   overflow:visible;
+   position:static;
+   width:auto;
+}
+
+.main__p{
+   padding-left:2em;
+}
+
+
+
+   
+   
+.footer__CR,
+.footer__p{
+   text-align: center;
+}
