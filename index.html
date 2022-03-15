@@ -17,200 +17,393 @@
         Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit
         voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière,
         Bell et Voyages Traditours circuits et croisières.">
-            <source srcset="images/bandeau_600.jpg" media="(min-width:599px)">
+            <source srcset="images/bandeau_600.jpg" media="(max-width:599px)">
             <source srcset="images/bandeau_1200.jpg" media="(min-width:600px)">
-            <img class="header__img" src="images/bandeau_1200.jpg" alt="tourne disque">
+            <img class="header__img" src="images/bandeau_1200.jpg" alt="Image concours  lisant le contenu suivant; Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le
+            Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit
+            voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière,
+            Bell et Voyages Traditours circuits et croisières.">
         </picture>
 
     </header>
-    <main class="main">
+    <main class="main rangee">
         <div class="main__div">
             <h1 class="main__h1"> Concours </h1>
-            <p class="main__p">
-                Complétez le coupon de participation et répondez à la question du jour ci-dessous.</br>
-                30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
-                Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
-                les finalistes présents, un grand gagnant s’envolera vers la destination de
-                son choix!</br>
-                Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance
-                à tous!
-            </p>
+            <aside class="cols_4_de_12" role="complementary">
+                <p class="main__p">
+                    Complétez le coupon de participation et répondez à la question du jour ci-dessous.</br>
+                    30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
+                    Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
+                    les finalistes présents, un grand gagnant s’envolera vers la destination de
+                    son choix!</br>
+                    Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance
+                    à tous!
+                </p>
+            </aside>
         </div>
-        <form class="main__form" action="traitement.php">
+        <form class="main__form cols_8_de_12" role="form">
             <fieldset class="form__fieldset">
                 <legend class="form__legend">
                     <h2>Coupon de participation</h2>
                 </legend>
 
-                <fieldset class="form__nomComplet">
+                <fieldset class="form__nomComplet ctnvalidation">
                     <legend class="nomComplet_legend"> Nom complet</legend>
+                    <div class="rangee">
+                        <p class="form__label cols_6_de_12">
+                            <label for="prénom">Prénom</label>
+                            <input type="text" name="prénom" id="prénom" minlength="3" pattern="[a-zA-ZÀ-ÿ \-]+"
+                                required="" title="caractères alphabétiques francais seulement">
+                        </p>
+                       
 
-                    <p class="form__label">
-                        <label for="prénom">Prénom</label>
-                        <input type="text" name="prénom" id="prénom">
-                    </p>
-
-                    <p class="form__label"><label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom">
-                    </p>
+                    
+                        <p class="form__label cols_6_de_12"><label for="nom">Nom</label>
+                            <input type="text" name="nom" id="nom" minlength="3" pattern="[a-zA-ZÀ-ÿ \-]+" required="" title="caractères alphabétiques francais seulement">
+                        </p>
+                    </div>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    Le prénom ou le nom comporte un ou plusieurs caractères interdits.
+                </p>
 
                 </fieldset>
-
-                <p class="form__label"><label for="adresse">
-                        Adresse</label>
-                    <input type="text" name="adresse" id="adresse">
-                </p>
-                <p class="form__label"><label for="ville">Ville</label>
-                    <input type="text" name="ville" id="ville">
-                </p>
-                <p class="form__label"><label for="pays">Pays</label>
-                    <select class="select__pays">
-
-                        <option value="poe">Province ou état</option>
-                        <optgroup class="group__pays" label="Canada">
-                            <option value="AB">Alberta</option>
-                            <option value="BC">British Columbia</option>
-                            <option value="MB">Manitoba</option>
-                            <option value="NB">New Brunswick</option>
-                            <option value="NL">Newfoundland and Labrador</option>
-                            <option value="NS">Nova Scotia</option>
-                            <option value="ON">Ontario</option>
-                            <option value="PE">Prince Edward Island</option>
-                            <option value="QC">Quebec</option>
-                            <option value="SK">Saskatchewan</option>
-                            <option value="NT">Northwest Territories</option>
-                            <option value="NU">Nunavut</option>
-                            <option value="YT">Yukon</option>
-                        <optgroup class="group__pays" label="États-Unis"></optgroup>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="DC">District Of Columbia</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option value="UT">Utah</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WA">Washington</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WY">Wyoming</option>
-                        </optgroup>
-                    </select>
-                </p>
-                <p class="form__label"><label for="codePostal">Code postal (X1X 1X1)</label>
-                    <input type="text" name="codePostal" id="codePostal">
-                </p>
-                <p class="form__label"><label for="courriel">Courriel</label>
-                    <input type="email" name="courriel" id="courriel">
-                </p>
-
-
-                <fieldset class="form__telephone">
-                    <legend class="nomComplet_legend"> Téléphone (indicatif - numéro) </legend>
-
+                <div class="adresse ctnValidation">
                     <p class="form__label">
-                        <label for="indicatif">Indicatif</label>
-                        <input type="number" name="indicatif" id="indicatif">
+                        <label for="adresse">
+                            Adresse</label>
+                        <input type="text" name="adresse" id="adresse" required="">
                     </p>
-                    <span class="form__span">
-                        -
-                    </span>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    L’adresse est requise.
+                </p>
+                </div>
+                <div class="ville ctnValidation">
+                    <p class="form__label"><label for="ville">Ville</label>
+                        <input type="text" name="ville" id="ville" required>
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    Attention, le nom de la ville comporte un ou plusieurs caractères interdits.
+                </p>
+                </div>
+                <div class="pays ctnValidation">
+                    <p class="form__label"><label for="pays">Pays</label>
+                        <select class="select__pays">
 
-                    <p class="form__label"><label for="numero">Numéro</label>
-                        <input type="number" name="numero" id="numero">
+                            <option value="poe">Province ou état</option>
+                            <optgroup class="group__pays" label="Canada">
+                                <option value="AB">Alberta</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NL">Newfoundland and Labrador</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="ON">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QC">Quebec</option>
+                                <option value="SK">Saskatchewan</option>
+                                <option value="NT">Northwest Territories</option>
+                                <option value="NU">Nunavut</option>
+                                <option value="YT">Yukon</option>
+                            <optgroup class="group__pays" label="États-Unis"></optgroup>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                            </optgroup>
+                        </select>
                     </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    La province ou l’état d’origine doit être précisé.
+                </p>
+                </div>
+                <div class="codePostal ctnValidation">
+                    <p class="form__label"><label for="codePostal">Code postal (X1X 1X1)</label>
+                        <input type="text" name="codePostal" id="codePostal"
+                            pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required="" title="Chaîne de six caractères comportant 3 caractères alphanumériques francais et 3 nombre">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    Le code postal doit respecter le format X1X 1X1.
+                </p>
+                    
+                </div>
+                <div class="courriel ctnValidation">
+
+                    <p class="form__label"><label for="courriel">Courriel</label>
+                        <input type="email" name="courriel" id="courriel" required="">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    Attention, le courriel comporte un ou plusieurs caractères interdits.
+                </p>
+                </div>
+
+
+                <fieldset class="form__telephone ctnValidation">
+                    <legend class="telephone_legend"> Téléphone (indicatif - numéro) </legend>
+
+                    <div class="rangee">
+                        <p class="form__label cols_3_de_12">
+                            <label for="indicatif">Indicatif</label>
+                            <input type="number" name="indicatif" id="indicatif" maxlength="3" required>
+                        </p>
+
+                    
+                        <p class="cols_1_de_12 tiret">-</p>
+
+                    
+                        <p class="form__label cols_8_de_12"><label for="numero">Numéro</label>
+                            <input type="number" name="numero" id="numero" maxlength="7" required>
+                        </p>
+                    
+                </div>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--avertissement" aria-hidden="true"></span>
+                    </span>
+                Attention, le numéro de téléphone ne doit pas comporter d’espace ou de trait d’union.
+            </p>
                 </fieldset>
 
 
             </fieldset>
-        </form>
 
-        <form class="main__form" action="traitement.php">
+
             <fieldset class="form__fieldset">
                 <legend class="form__legend">
-                    Question du jeu
+                    <h2>Question du jeu</h2>
                 </legend>
 
 
-                <fieldset class="form__date">
+                <fieldset class="form__date ctnValidation">
                     <legend class="form__legend">
                         Date à laquelle la question à été posée?
                     </legend>
-                    <p class="form__label">
-                        <label for="jour"> Jour</label>
-                        <input type="number" name="jour" id="jour">
-                    </p>
-                    <p class="form__label">
-                        <label for="mois"> Mois</label>
+                    <div class="jour rangee">
+                        <p class="form__label cols_4_de_12">
+                            <label for="jour"> Jour</label>
+                            <input type="number" name="jour" id="jour" required>
+                        </p>
+                
+                  
+                        <p class="form__label cols_4_de_12">
+                            <label for="mois"> Mois</label>
 
-                        <select class="select__mois">
-                            <option value="select"> Sélectionner</option>
-                            <option value="jan"> Janvier</option>
-                            <option value="fev"> Février</option>
-                            <option value="mar"> Mars</option>
-                            <option value="avr"> Avril</option>
-                            <option value="mai"> Mai</option>
-                            <option value="juin"> Juin</option>
-                            <option value="jui"> Juillet</option>
-                            <option value="aout"> Août</option>
-                            <option value="sept"> Septembre</option>
-                            <option value="oct"> Octobre</option>
-                            <option value="nov"> Novembre</option>
-                            <option value="dec"> Décembre</option>
-                        </select>
-                    </p>
+                            <select class="select__mois">
+                                <option value="select"> Sélectionner</option>
+                                <option value="jan"> Janvier</option>
+                                <option value="fev"> Février</option>
+                                <option value="mar"> Mars</option>
+                                <option value="avr"> Avril</option>
+                                <option value="mai"> Mai</option>
+                                <option value="juin"> Juin</option>
+                                <option value="jui"> Juillet</option>
+                                <option value="aout"> Août</option>
+                                <option value="sept"> Septembre</option>
+                                <option value="oct"> Octobre</option>
+                                <option value="nov"> Novembre</option>
+                                <option value="dec"> Décembre</option>
+                            </select>
+                        </p>
+                    
+                        <p class="form__label cols_4_de_12">
+                            <label for="année"> Année</label>
+                            <input type="number" name="année" id="année" required>
+                        </p>
+                    </div>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    SVP, entrez la date complète.
+                </p>
+                </fieldset>
+
+                <fieldset class="question ctnValidation">
+
+                    <legend class="form__legend">
+                        Lequel de ces monuments est un mausolée?
+                    </legend>
+
+                    <ul class="form__ul rangee">
+                        <li class="form__item cols_4_de_12">
+                            <div class="chateau ctnValidation">
+                                <p class="form__label">
+                                    <label for="chateauIf"></label>
+                                    <input type="radio" name="chateauIf" id="chateauIf" required>
+                                </p>
+
+                                <span class="li__span">
+                                    <picture class="li__picture" alt="Château d'If">
+                                        <source srcset="images/chateaudIf-small.jpg" media="(max-width:599px)">
+                                        <source srcset="images/chateaudIf.jpg" media="(min-width:600px)">
+                                        <img class="li__img" src="images/chateaudIf.jpg" alt="château d'If">
+                                    </picture>
+                                    <p class="texte__img"> Le château d'If</p>
+                                </span>
+                            </div>
+                        </li>
 
 
 
+                        <li class="form__item cols_4_de_12">
+                            <div class="luxembourg ctnValidation">
+                                <p class="form__label">
+                                    <label for="luxembourg"></label>
+                                    <input type="radio" name="luxembourg" id="luxembourg">
+                                </p>
+                                <span class="li__span">
+                                    <picture class="li__picture" alt="Le palais du Luxembourg">
+                                        <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:599px)">
+                                        <source srcset="images/palaisluxembourg.jpg" media="(min-width:600px)">
+                                        <img class="li__img" src="images/palaisluxembourg.jpg"
+                                            alt="Le palais du Luxembourg">
+                                    </picture>
+                                    <p class="texte__img"> Le palais du Luxembourg</p>
+                                </span>
+                            </div>
+                        </li>
 
-                    <p class="form__label">
-                        <label for="année"> Année</label>
-                        <input type="number" name="année" id="année">
-                    </p>
+                        <li class="form__item cols_4_de_12">
+                            <div class="tajmahal ctnValidation">
+                                <p class="form__label">
+                                    <label for="tajMahal"></label>
+                                    <input type="radio" name="tajMahal" id="tajMahal">
+                                </p>
+                                <span class="li__span">
+                                    <picture class="li__picture" alt="Le Taj Mahal">
+                                        <source srcset="images/tajmahal-small.jpg" media="(max-width:599px)">
+                                        <source srcset="images/tajmahal.jpg" media="(min-width:600px)">
+                                        <img class="li__img" src="images/palaisluxembourg.jpg" alt="Le Taj Mahal">
+                                    </picture>
+                                    <p class="texte__img"> Le Taj Mahal</p>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    Veuillez répondre à la question du jour.
+                </p>
+
                 </fieldset>
             </fieldset>
-        </form>
+       
+
+        <div class="main__pied ctnValidation">
+            <div class="reglement">
+                <p class="main__pied__label">
+
+                    <input type="checkbox" name="reglement" id="reglement" required="">
+                    <label for="reglement"> J'ai lu et j'accepte le <a href="*"> règlement du concours</a> et je
+                        confirme
+                        avoir atteint l'âge de la majorité dans ma province de résidence.</label>
+                </p>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--avertissement" aria-hidden="true"></span>
+                    </span>
+            SVP, acceptez le règlement du concours.
+        </p>
+            </div>
+            <div class="documentation">
+
+                <p class="main__pied__label">
+
+                    <input type="checkbox" name="documentation" id="documentation">
+                    <label for="documentation"> Oui, j'accepte de recevoir de la documentation de Radio-Canada.</label>
+                </p>
+            </div>
+
+            <p class="soumission">
+
+                <button class="button"> Enregister </button>
+            </p>
+        </div>
+    </form>
     </main>
     <footer>
+        <p class="footer__CR">
+            <small class="footer__copyright"> Tous droit réservés, © Projet en Design d'interface II, 2019 </small>
+        </p>
+        <p class="footer__p">
+            <small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy. </small>
+        </p>
 
     </footer>
 
