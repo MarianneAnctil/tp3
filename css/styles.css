@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author marianneanctil courriel
  *
  * TABLE DES MATIERES
  * Normalize
@@ -19,28 +19,28 @@
 
 /* Normalize
    ========================================================================== */
-@import url(_normalize.css);
-
-/* Utilitaires
-   ========================================================================== */
-   html {
-      box-sizing: border-box;
-      max-width:100%;
-  }
-  
-  *, 
-  *::before, 
-  *::after {
-      box-sizing: inherit;
-  }
+    @import url(normalize.css);
 
 /* Charte typographique
    ========================================================================== */
-   @import url(tp3_typo.css);
+   @import url(typo.css);
 
 /* Grille
    ========================================================================== */
    @import url(grille.css);
+
+/* Utilitaires
+   ========================================================================== */
+html {
+    box-sizing: border-box;
+    max-width:100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
 /* Mise en page
    ========================================================================== */
