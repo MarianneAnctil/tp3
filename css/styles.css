@@ -19,7 +19,7 @@
 
 /* Normalize
    ========================================================================== */
-    @import url(normalize.css);
+    /*@import url(normalize.css);*/
 
 /* Charte typographique
    ========================================================================== */
@@ -41,7 +41,31 @@ html {
 *::after {
     box-sizing: inherit;
 }
+/*screen reader*/
+.screen-reader-only{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
+.screen-reader-only.focusable:active,
+.screen-reader-only.focusable:focus{
+    clip:auto;
+    height:auto;
+    margin:0;
+    overflow:visible;
+    position:static;
+    width:auto;
+}
+
+img{
+    max-width: 100%;
+}
 /* Mise en page
    ========================================================================== */
  body{
@@ -54,14 +78,17 @@ html {
  }
 
  @media (min-width: 600px){
- .rangee {
-     display: flex;
-     justify-content: space-between;
-     align-items: stretch;
-     flex-wrap: wrap;
- }
+     /* cette classe étant déjà déclarée dans le fichier grille.css
+        on peut simplement redéfinir le flex-wrap.
+        On pourrait aussi le modifier directement dans grille.css
+      */
+    .rangee {
+        flex-wrap: wrap;
+    }
 }
-
+.main__h1{
+    width: 100%; /* pour que le h1 prenne sa place sur tout la première rangée */
+}
 .h1 {
    width: 100%;
 }
@@ -102,33 +129,14 @@ html {
    width:100% ;
 }
 
-/*screen reader*/
-.screen-reader-only{
-   border:0;
-   clip: rect ( 0 0 0 0 );
-   height:1px;
-   margin: -1;
-   overflow: hidden;
-   padding:0;
-   position: absolute;
-   width:1px;
-}
-
-.screen-reader-only.focusable:active,
-.screen-reader-only.focusable:focus{
-   clip:auto;
-   height:auto;
-   margin:0;
-   overflow:visible;
-   position:static;
-   width:auto;
-}
-
 .main__p{
    padding-left:2em;
 }
 
-
+.form__ul{
+    padding-left: 0;
+    list-style: none;
+}
 
    
    /*footer*/
